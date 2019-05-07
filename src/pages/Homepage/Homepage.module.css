@@ -1,0 +1,13 @@
+.Homepage {
+  background-color: white;
+  height: 450px;
+}
+
+header {
+  background-image: url("../../assets/img/square-purple-1.png");
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}

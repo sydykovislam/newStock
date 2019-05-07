@@ -1,9 +1,9 @@
 import React from "react";
 // import What from './What/What';
-import "./Articles.css";
+import classes from "./Articles.module.css";
 
 function Articles(props) {
-  return <div className="Articles">Articles</div>;
+  return <div className={classes.Articles}>Articles</div>;
 }
 
 export default Articles;

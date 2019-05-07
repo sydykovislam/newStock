@@ -19,7 +19,7 @@ function Navbarr(props) {
         <Navbar className="bg-info Nav" expand="lg">
           <Container>
             <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-              AkiStock
+              Yssyk-Kul life
             </NavbarBrand>
             <button className="navbar-toggler" id="navbarNav" type="button">
               <span className="navbar-toggler-bar navbar-kebab" />

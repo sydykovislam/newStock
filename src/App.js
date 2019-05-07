@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
-import "./App.css";
+import classes from "./App.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Homepage from "./pages/Homepage/Homepage";
@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
+        <div className={classes.App}>
           <Navbar />
 
           <Route path="/" exact component={Homepage} />
