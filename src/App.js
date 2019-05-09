@@ -8,8 +8,23 @@ import Homepage from "./pages/Homepage/Homepage";
 import PhotosGallery from "./pages/PhotosGallery/PhotosGallery";
 import Articles from "./pages/Articles/Articles";
 
+import axios from "./axios";
+
 class App extends Component {
+  state = {
+    articles: null
+  };
+
+  componentDidMount() {
+    axios.get("articles.json").then(response => {
+      this.setState({
+        articles: response.data
+      });
+    });
+  }
+
   render() {
+    console.log(this.state.articles);
     return (
       <BrowserRouter>
         <div className={classes.App}>
