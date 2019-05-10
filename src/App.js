@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
+import { connect } from "react-redux";
 
 import classes from "./App.module.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -20,11 +21,12 @@ class App extends Component {
       this.setState({
         articles: response.data
       });
+      this.props.loadData(response.data);
     });
   }
 
   render() {
-    console.log(this.state.articles);
+    console.log(this.props.articles);
     return (
       <BrowserRouter>
         <div className={classes.App}>
@@ -41,4 +43,21 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    loadData: data => dispatch({ type: "LOAD_DATA", data })
+  };
+};
+
+const mapStateToProps = state => {
+  return {
+    // this.props.ingredients: reducer.js/state.ingredients
+    articles: state.articles
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  null
+)(App);
