@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Homepage from "./pages/Homepage/Homepage";
 import PhotosGallery from "./pages/PhotosGallery/PhotosGallery";
 import Articles from "./pages/Articles/Articles";
+import FullArticle from "./components/FullArticle/FullArticle";
 import axios from "./axios";
 // import { ReactComponent as Logo } from "./assets/logo.svg";
 // import { BrowserRouter as Router } from "react-router-dom";
@@ -47,6 +48,7 @@ class App extends Component {
           <Route path="/" exact component={Homepage} />
           <Route path="/articles" component={Articles} />
           <Route path="/ps-gallery" component={PhotosGallery} />
+          <Route path="/full-article" component={FullArticle} />
 
           <Footer />
         </div>
