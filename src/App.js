@@ -8,13 +8,18 @@ import Footer from "./components/Footer/Footer";
 import Homepage from "./pages/Homepage/Homepage";
 import PhotosGallery from "./pages/PhotosGallery/PhotosGallery";
 import Articles from "./pages/Articles/Articles";
-
 import axios from "./axios";
+// import { ReactComponent as Logo } from "./assets/logo.svg";
+// import { BrowserRouter as Router } from "react-router-dom";
+// import Routes from "./Routes";
 
 class App extends Component {
   state = {
+    collapseID: "",
     articles: null
   };
+
+  state = {};
 
   componentDidMount() {
     axios.get("articles.json").then(response => {
@@ -25,8 +30,15 @@ class App extends Component {
     });
   }
 
+  toggleCollapse = collapseID => () =>
+    this.setState(prevState => ({
+      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+    }));
+
+  closeCollapse = collapseID => () =>
+    this.state.collapseID === collapseID && this.setState({ collapseID: "" });
+
   render() {
-    console.log(this.props.articles);
     return (
       <BrowserRouter>
         <div className={classes.App}>

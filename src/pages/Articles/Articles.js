@@ -11,7 +11,7 @@ function Articles(props) {
 
   return (
     <div className={classes.Articles}>
-      Articles:
+      <h1 className={classes.Title}>Articles:</h1>
       {articlesList}
     </div>
   );

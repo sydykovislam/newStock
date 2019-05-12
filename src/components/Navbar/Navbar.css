@@ -1,3 +1,20 @@
 .Nav {
   height: 100px;
+  widht: 100%;
+  background-color: rgb(170, 73, 214);
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+.list li {
+  line-height: 100px;
+
+  font-weight: bolder;
+  font-size: 20px;
+}
+.link {
+  color: black;
 }

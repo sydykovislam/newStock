@@ -4,10 +4,15 @@
 }
 
 header {
-  background-image: url("../../assets/img/square-purple-1.png");
+  background-image: url("../../assets/img/header-img.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex !important;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 450px;
   width: 100%;
+}
+h1 {
+  color: white;
 }

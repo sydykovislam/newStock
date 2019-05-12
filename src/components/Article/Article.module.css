@@ -1,6 +1,20 @@
+.Article {
+  display: flex;
+  width: 90%;
+  height: 250px;
+  border: 2px solid black;
+  margin: 20px auto;
+}
+
 .Article h2 {
   color: black;
+  width: 100%;
+  margin: 10px 0 10px 7px;
 }
 .Article p {
   color: black;
+  margin: 0 7px;
+}
+.Article img {
+  height: 250px;
 }
