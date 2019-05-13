@@ -4,14 +4,14 @@ import { connect } from "react-redux";
 // import from './FullArticle.css'
 
 function FullArticle(props) {
-  // console.log(props.flArt);
-  return <div className="FullArticle">asdf</div>;
+  console.log(props.flArt);
+  return <div className="FullArticle">Full Article</div>;
 }
 
 const mapStateToProps = state => {
   return {
     // this.props.ingredients: reducer.js/state.ingredients
-    flArt: state.FullArticle
+    flArt: state.fullArticle
   };
 };
 
