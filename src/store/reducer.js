@@ -1,6 +1,6 @@
 const initialState = {
   articles: [],
-  fullArticle: []
+  fullArticle: {}
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,13 +16,10 @@ const reducer = (state = initialState, action) => {
         ...state,
         articles
       };
+
     case "LOAD_FULL_ARTICLE":
-      let fullArticle = [];
-
-      for (let id in action.data) {
-        fullArticle.push({ id, ...action.data[id] });
-      }
-
+      let fullArticle = action.content;
+      console.log(action.content);
       return {
         ...state,
         fullArticle

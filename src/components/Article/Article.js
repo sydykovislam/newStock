@@ -31,7 +31,7 @@ class Article extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    loadFullArticle: data => dispatch({ type: "LOAD_FULL_ARTICLE", data })
+    loadFullArticle: content => dispatch({ type: "LOAD_FULL_ARTICLE", content })
   };
 };
 

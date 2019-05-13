@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 function FullArticle(props) {
   console.log(props.flArt);
-  return <div className="FullArticle">Full Article</div>;
+  return <div className="FullArticle">{props.flArt.title}</div>;
 }
 
 const mapStateToProps = state => {
