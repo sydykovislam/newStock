@@ -1,11 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 // import What from './What/What';
-// import from './FullArticle.css'
+import classes from "./FullArticle.module.css";
 
 function FullArticle(props) {
   // console.log(props.flArt);
-  return <div className="FullArticle">{props.flArt.title}</div>;
+  return (
+    <div className="FullArticle">
+      <h1 className={classes.Title}>{props.flArt.title}</h1>
+    </div>
+  );
 }
 
 const mapStateToProps = state => {

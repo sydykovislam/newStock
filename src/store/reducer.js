@@ -25,6 +25,14 @@ const reducer = (state = initialState, action) => {
         fullArticle
       };
 
+    case "CLEAN_ARTICLE":
+      fullArticle = action.clear;
+
+      return {
+        ...state,
+        fullArticle
+      };
+
     default:
       return { ...state };
   }
