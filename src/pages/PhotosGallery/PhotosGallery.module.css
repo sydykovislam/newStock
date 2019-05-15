@@ -2,3 +2,10 @@
   background-color: white;
   height: 450px;
 }
+.PhotosGallery h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 35px;
+  font-weight: bolder;
+  color: black;
+}

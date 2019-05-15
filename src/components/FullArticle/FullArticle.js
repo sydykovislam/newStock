@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 // import from './FullArticle.css'
 
 function FullArticle(props) {
-  console.log(props.flArt);
+  // console.log(props.flArt);
   return <div className="FullArticle">{props.flArt.title}</div>;
 }
 

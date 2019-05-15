@@ -3,7 +3,11 @@ import React from "react";
 import classes from "./PhotosGallery.module.css";
 
 function PhotosGallery(props) {
-  return <div className={classes.PhotosGallery}>PS Gallery</div>;
+  return (
+    <div className={classes.PhotosGallery}>
+      <h1>PS Gallery</h1>
+    </div>
+  );
 }
 
 export default PhotosGallery;

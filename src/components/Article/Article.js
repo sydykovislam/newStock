@@ -6,20 +6,18 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 class Article extends Component {
+  openArticle = () => {
+    axios.get(`full-articles/${this.props.id}.json`).then(response => {
+      this.props.loadFullArticle(response.data);
+    });
+  };
   render(props) {
-    let openArticle = id => {
-      axios.get(`full-articles/${id}.json`).then(response => {
-        this.props.loadFullArticle(response.data);
-      });
-    };
     return (
       <div className={classes.Article}>
         <img src={this.props.preview} />
         <div>
-          <h2>
-            <Link to="/full-article" onClick={openArticle(this.props.id)}>
-              {this.props.title}
-            </Link>
+          <h2 onClick={this.openArticle}>
+            <Link to="/full-article">{this.props.title}</Link>
           </h2>
 
           <p>{this.props.content}</p>
