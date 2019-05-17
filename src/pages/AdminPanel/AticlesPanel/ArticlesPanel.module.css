@@ -1,0 +1,16 @@
+.ArticlesPanel {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+}
+.ArticlesPanel h1 {
+  color: black;
+  text-align: center;
+}
+.Inputs {
+  margin: 10px 0;
+}
+.ArticlesPanel button {
+  margin: 10px 0;
+}

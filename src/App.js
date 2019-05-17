@@ -10,6 +10,8 @@ import PhotosGallery from "./pages/PhotosGallery/PhotosGallery";
 import Articles from "./pages/Articles/Articles";
 import FullArticle from "./components/FullArticle/FullArticle";
 import axios from "./axios";
+import AdminPanel from "./pages/AdminPanel/AdminPanel";
+import ArticlesPanel from "./pages/AdminPanel/AticlesPanel/ArticlesPanel";
 // import { ReactComponent as Logo } from "./assets/logo.svg";
 // import { BrowserRouter as Router } from "react-router-dom";
 // import Routes from "./Routes";
@@ -49,6 +51,9 @@ class App extends Component {
           <Route path="/articles" component={Articles} />
           <Route path="/ps-gallery" component={PhotosGallery} />
           <Route path="/full-article" component={FullArticle} />
+
+          <Route path="/admin-panel" component={AdminPanel} />
+          <Route path="/articles-panel" component={ArticlesPanel} />
 
           <Footer />
         </div>
