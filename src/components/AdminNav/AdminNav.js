@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import What from './What/What';
 import classes from "./AdminNav.module.css";
-import Article from "../Article/Article";
+// import Article from "../Article/Article";
 
 function AdminNav(props) {
   return (
-    <div className="AdminNav">
+    <div className={classes.AdminNav}>
       <ul>
         <li>
           <Link to="/articles-panel">Add article</Link>

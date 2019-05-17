@@ -7,10 +7,12 @@
 .ArticlesPanel h1 {
   color: black;
   text-align: center;
+  margin: 25px 0;
 }
 .Inputs {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 .ArticlesPanel button {
   margin: 10px 0;
+  margin-bottom: 30px;
 }

@@ -46,10 +46,18 @@ class ArticlesPanel extends Component {
     let id = Math.random() * 10000;
     let newArtclPrw = { ...this.newArticlePrw };
     newArtclPrw.id = id.toFixed(0);
+
     let article = newArtclPrw;
+    let fullArticle = { ...this.newArticle };
 
     axios.post("articles.json", article).then(response => {
+      // name: "Article";
       alert("Success");
+    });
+    axios.post("full-articles.json", fullArticle).then(response => {
+      console.log(response.headers);
+      // name: "Article";
+      // alert("Success");
     });
   };
 
