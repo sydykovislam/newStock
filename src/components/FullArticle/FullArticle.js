@@ -10,7 +10,7 @@ function FullArticle(props) {
       <h1 className={classes.Title}>{props.flArt.title}</h1>
       <img src={props.flArt.preview} />
       <div className={classes.text}>
-        <p>{props.flArt.content}</p>
+        <p>{props.flArt.fullContent}</p>
       </div>
     </div>
   );

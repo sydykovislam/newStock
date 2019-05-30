@@ -9,7 +9,7 @@ class Articles extends Component {
   }
   render() {
     let articlesList = this.props.articles.map(article => (
-      <Article key={article.id} {...article} />
+      <Article key={article.id} {...article} article={article} />
     ));
     return (
       <div className={classes.Articles}>

@@ -7,15 +7,16 @@ class ArticlesPanel extends Component {
   newArticlePrw = {
     title: "title",
     content: "Content",
+    fullContent: "Full Content",
     preview: "url",
     id: 0
   };
 
-  newArticle = {
-    title: "title",
-    content: "Content",
-    preview: "url"
-  };
+  // newArticle = {
+  //   title: "title",
+  //   content: "Content",
+  //   preview: "url"
+  // };
 
   // let createFunc = (com) => {
   //   let newCom = event.target.value;
@@ -26,7 +27,6 @@ class ArticlesPanel extends Component {
   setTitle = event => {
     let newCom = event.target.value;
     this.newArticlePrw.title = newCom;
-    this.newArticle.title = newCom;
   };
   setContentPrw = event => {
     let newCom = event.target.value;
@@ -34,12 +34,11 @@ class ArticlesPanel extends Component {
   };
   setContent = event => {
     let newCom = event.target.value;
-    this.newArticle.content = newCom;
+    this.newArticlePrw.fullContent = newCom;
   };
   setUrl = event => {
     let newCom = event.target.value;
     this.newArticlePrw.preview = newCom;
-    this.newArticle.preview = newCom;
   };
 
   addArticle = () => {
@@ -48,16 +47,10 @@ class ArticlesPanel extends Component {
     newArtclPrw.id = id.toFixed(0);
 
     let article = newArtclPrw;
-    let fullArticle = { ...this.newArticle };
 
     axios.post("articles.json", article).then(response => {
       // name: "Article";
       alert("Success");
-    });
-    axios.post("full-articles.json", fullArticle).then(response => {
-      console.log(response.headers);
-      // name: "Article";
-      // alert("Success");
     });
   };
 

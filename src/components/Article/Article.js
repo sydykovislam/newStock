@@ -7,9 +7,10 @@ import { connect } from "react-redux";
 
 class Article extends Component {
   openArticle = () => {
-    axios.get(`full-articles/${this.props.id}.json`).then(response => {
-      this.props.loadFullArticle(response.data);
-    });
+    // axios.get(`full-articles/${this.props.id}.json`).then(response => {
+    //   this.props.loadFullArticle(response.data);
+    // });
+    this.props.loadFullArticle(this.props.article);
   };
   render(props) {
     return (
