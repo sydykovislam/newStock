@@ -2,4 +2,5 @@
   width: 30%;
   height: 300px;
   border: 2px solid black;
+  background-size: cover;
 }

@@ -25,7 +25,7 @@ class PhotoGallery extends Component {
     return (
       <div className={classes.PhotosGallery}>
         <h1>PS Galleries</h1>
-        {galleriesList}
+        <div className={classes.galleriesList}>{galleriesList}</div>
       </div>
     );
   }

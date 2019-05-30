@@ -13,10 +13,13 @@ class Article extends Component {
     this.props.loadFullArticle(this.props.article);
   };
   render(props) {
+    // let styles = { backgroundImage: "url(" + this.props.preview + ")" };
     return (
       <div className={classes.Article}>
-        <img src={this.props.preview} />
-        <div>
+        <div className={classes.previewImg}>
+          <img src={this.props.preview} />
+        </div>
+        <div className={classes.previewContent}>
           <h2 onClick={this.openArticle}>
             <Link to="/full-article">{this.props.title}</Link>
           </h2>

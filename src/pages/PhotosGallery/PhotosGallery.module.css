@@ -2,6 +2,11 @@
   background-color: white;
   height: 450px;
 }
+.galleriesList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .PhotosGallery h1 {
   text-align: center;
   margin: 20px 0;
