@@ -1,6 +1,7 @@
 .Footer {
   height: 250px;
   background-color: black;
+  margin-bottom: 0px !important;
 }
 .Footer h1 {
   line-height: 250px;
@@ -8,4 +9,5 @@
   font-size: 40px;
   text-align: center;
   font-weight: 500;
+  margin-bottom: 0px !important;
 }
