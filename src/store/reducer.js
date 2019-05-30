@@ -1,6 +1,7 @@
 const initialState = {
   articles: [],
-  fullArticle: {}
+  fullArticle: {},
+  galleries: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -31,6 +32,18 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         fullArticle
+      };
+
+    case "LOAD_GALLERIES":
+      let galleries = [];
+
+      for (let id in action.data) {
+        galleries.push({ id, ...action.data[id] });
+      }
+
+      return {
+        ...state,
+        galleries
       };
 
     default:

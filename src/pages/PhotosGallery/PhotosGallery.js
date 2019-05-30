@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import What from './components/What/What';
 import classes from "./PhotosGallery.module.css";
 import axios from "../../axios";
+import { connect } from "react-redux";
 
 class PhotoGallery extends Component {
   state = {
@@ -11,9 +12,9 @@ class PhotoGallery extends Component {
   componentDidMount() {
     axios.get("psGalleries.json").then(response => {
       this.setState({
-        articles: response.data
+        galleries: response.data
       });
-      this.props.loadData(response.data);
+      this.props.loadGalleriesList(response.data);
     });
   }
   render() {
@@ -27,14 +28,14 @@ class PhotoGallery extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    loadData: data => dispatch({ type: "LOAD_DATA", data })
+    loadGalleriesList: data => dispatch({ type: "LOAD_GALLERIES", data })
   };
 };
 
 const mapStateToProps = state => {
   return {
     // this.props.ingredients: reducer.js/state.ingredients
-    articles: state.articles
+    galleries: state.galleries
   };
 };
 
