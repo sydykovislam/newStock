@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import classes from "./PhotosGallery.module.css";
 import axios from "../../axios";
 import { connect } from "react-redux";
+import PsGalleryPrw from "../../components/PsGalleryPrw/PsGalleryPrw";
 
 class PhotoGallery extends Component {
   state = {
@@ -18,9 +19,13 @@ class PhotoGallery extends Component {
     });
   }
   render() {
+    let galleriesList = this.props.galleries.map(galleries => (
+      <PsGalleryPrw key={galleries.id} {...galleries} gallery={galleries} />
+    ));
     return (
       <div className={classes.PhotosGallery}>
         <h1>PS Galleries</h1>
+        {galleriesList}
       </div>
     );
   }

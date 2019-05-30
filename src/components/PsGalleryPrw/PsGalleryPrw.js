@@ -3,7 +3,12 @@ import React from "react";
 import classes from "./PsGalleryPrw.module.css";
 
 function PsGalleryPrw(props) {
-  return <div className="PsGalleryPrw">asd</div>;
+  let styles = `background-image: url(${props.bgImg});`;
+  return (
+    <div className={classes.PsGalleryPrw} style={styles}>
+      <h1>props.title</h1>
+    </div>
+  );
 }
 
 export default PsGalleryPrw;
