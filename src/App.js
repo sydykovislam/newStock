@@ -22,15 +22,23 @@ class App extends Component {
     articles: null
   };
 
-  state = {};
-
+  // componentDidUpdate() {
+  //   this.setState({
+  //     articles: null
+  //   });
+  // }
   componentDidMount() {
-    axios.get("articles.json").then(response => {
-      this.setState({
-        articles: response.data
+    console.log(this.state.articles);
+    if (this.state.articles === null) {
+      axios.get("articles.json").then(response => {
+        this.setState({
+          articles: response.data
+        });
+        this.props.loadData(response.data);
       });
-      this.props.loadData(response.data);
-    });
+    } else {
+      console.log(this.state.articles);
+    }
   }
 
   toggleCollapse = collapseID => () =>
